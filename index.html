@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/70ac62cf7c.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="script.js" defer></script>
+		<title>Music Player</title>
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="img-song/music-note-ico.svg"
+		/>
+	</head>
+	<!--! THIS SONG PLAYER ONLY PLAYS ONE SONG -->
+	<body>
+		<div class="wrapper">
+			<div class="musicPlayer">
+				<nav>
+					<div class="circle">
+						<i class="fa-solid fa-angle-left"></i>
+					</div>
+					<div class="circle">
+						<i class="fa-solid fa-bars"></i>
+					</div>
+				</nav>
+
+				<img src="img-song/husn.jpg" alt="img" class="songImg" />
+				<h1>HUSN</h1>        <!--* SONG NAME-->
+				<p>Anuv Jain</p>     <!--* ARTIST NAME-->
+
+				<!-- TODO: IF YOU WANT YOU CAN CHANGE THE SONG AND IMAGE FROM HERE -->
+				<audio id="song">
+					<source
+						src="img-song/Husn-Anuv Jain.mp3"
+						type="audio/mpeg"
+					/>
+				</audio>
+
+				<input type="range" value="0" id="progress" />
+				
+				<div class="controls">
+					<div><i class="fa-solid fa-backward"></i></div>
+					<div onclick="playPause()">
+						<i class="fa-solid fa-play" id="iconCtrl"></i>
+					</div>
+					<div><i class="fa-solid fa-forward"></i></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
